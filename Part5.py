@@ -1,5 +1,5 @@
 import netmiko
-from netmiko import ConnectHandler
+from netmiko import ConnectHandler, NetMikoTimeoutException, NetMikoAuthenticationException
 import logging
 
 # Set up logging
@@ -14,6 +14,8 @@ device = {
     'password': 'telecomS144',  
     'secret' :  'telecomS144'
 }
+
+connection = None
 
 try:
     # Create a connection instance
@@ -65,10 +67,10 @@ try:
     # Log the output
     logger.info(f'Routine Backup of configuration:\n{output}')
 
-except netmiko.ssh_exception.NetMikoTimeoutException as e:
+except NetMikoTimeoutException as e:
     print(f"Connection timeout error: {str(e)}")
     logger.error(f"Connection timeout error: {str(e)}")
-except netmiko.ssh_exception.NetMikoAuthenticationException as e:
+except NetMikoAuthenticationException as e:
     print(f"Authentication error: {str(e)}")
     logger.error(f"Authentication error: {str(e)}")
 except Exception as e:
@@ -76,5 +78,5 @@ except Exception as e:
     logger.error(f"An error occurred: {str(e)}")
 finally:
     # Disconnect from the device
-    connection.disconnect()
-    
+    if connection:
+        connection.disconnect()

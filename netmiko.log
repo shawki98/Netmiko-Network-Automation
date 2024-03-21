@@ -1,0 +1,3346 @@
+INFO:paramiko.transport:Connected (version 1.99, client Cisco-1.25)
+INFO:paramiko.transport:Authentication (password) successful!
+INFO:netmiko:Output of show ip interface brief:
+Interface              IP-Address      OK? Method Status                Protocol
+FastEthernet0/0        192.168.122.2   YES NVRAM  up                    up      
+FastEthernet2/0        unassigned      YES unset  administratively down down    
+Loopback0              11.11.11.11     YES manual up                    up      
+INFO:netmiko:Output of configuration commands:
+configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+shawkiRouter(config)#interface loopback 0
+shawkiRouter(config-if)#ip address 11.11.11.11 255.255.255.255
+shawkiRouter(config-if)#no shut
+shawkiRouter(config-if)#exit
+shawkiRouter(config)#do write memory
+Building configuration...
+[OK]
+shawkiRouter(config)#end
+shawkiRouter#
+INFO:netmiko:Output of show run interface loopback 0:
+Building configuration...
+
+Current configuration : 102 bytes
+!
+interface Loopback0
+ description My loopback interface
+ ip address 11.11.11.11 255.255.255.255
+end
+
+INFO:netmiko:Backup of configuration:
+Building configuration...
+
+Current configuration : 1166 bytes
+!
+! Last configuration change at 04:42:04 UTC Wed Mar 20 2024 by shawki
+!
+version 15.2
+service timestamps debug datetime msec
+service timestamps log datetime msec
+!
+hostname shawkiRouter
+!
+boot-start-marker
+boot-end-marker
+!
+!
+enable secret 4 9ZAcADji.hxi7By8wLltz/MlI4nw2F2How0PljTGjAE
+!
+no aaa new-model
+no ip icmp rate-limit unreachable
+!
+!
+!
+!
+!
+!
+no ip domain lookup
+ip domain name shawki.com
+ip cef
+no ipv6 cef
+!
+!
+multilink bundle-name authenticated
+!
+!
+!
+!
+!
+!
+!
+username shawki password 0 ********
+username shawkiRouter password 0 ********
+!
+!
+!
+!
+!
+ip tcp synwait-time 5
+! 
+!
+!
+!
+!
+!
+!
+!
+!
+interface Loopback0
+ description My loopback interface
+ ip address 11.11.11.11 255.255.255.255
+!
+interface FastEthernet0/0
+ ip address 192.168.122.2 255.255.255.0
+ duplex full
+!
+interface FastEthernet2/0
+ no ip address
+ shutdown
+ duplex full
+!
+ip forward-protocol nd
+!
+!
+no ip http server
+no ip http secure-server
+!
+!
+!
+!
+control-plane
+!
+!
+line con 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+ stopbits 1
+line aux 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+ stopbits 1
+line vty 0 4
+ login local
+ transport input ssh
+!
+!
+end
+
+INFO:paramiko.transport:Connected (version 1.99, client Cisco-1.25)
+INFO:paramiko.transport:Authentication (password) successful!
+INFO:netmiko:Output of show ip interface brief:
+Interface              IP-Address      OK? Method Status                Protocol
+FastEthernet0/0        192.168.122.2   YES NVRAM  up                    up      
+FastEthernet2/0        unassigned      YES unset  administratively down down    
+Loopback0              11.11.11.11     YES manual up                    up      
+INFO:netmiko:Output of configuration commands:
+configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+shawkiRouter(config)#interface loopback 0
+shawkiRouter(config-if)#ip address 11.11.11.11 255.255.255.255
+shawkiRouter(config-if)#no shut
+shawkiRouter(config-if)#exit
+shawkiRouter(config)#do write memory
+Building configuration...
+[OK]
+shawkiRouter(config)#end
+shawkiRouter#
+INFO:netmiko:Output of show run interface loopback 0:
+Building configuration...
+
+Current configuration : 102 bytes
+!
+interface Loopback0
+ description My loopback interface
+ ip address 11.11.11.11 255.255.255.255
+end
+
+INFO:netmiko:Backup of configuration:
+Building configuration...
+
+Current configuration : 1166 bytes
+!
+! Last configuration change at 04:42:38 UTC Wed Mar 20 2024 by shawki
+!
+version 15.2
+service timestamps debug datetime msec
+service timestamps log datetime msec
+!
+hostname shawkiRouter
+!
+boot-start-marker
+boot-end-marker
+!
+!
+enable secret 4 9ZAcADji.hxi7By8wLltz/MlI4nw2F2How0PljTGjAE
+!
+no aaa new-model
+no ip icmp rate-limit unreachable
+!
+!
+!
+!
+!
+!
+no ip domain lookup
+ip domain name shawki.com
+ip cef
+no ipv6 cef
+!
+!
+multilink bundle-name authenticated
+!
+!
+!
+!
+!
+!
+!
+username shawki password 0 ********
+username shawkiRouter password 0 ********
+!
+!
+!
+!
+!
+ip tcp synwait-time 5
+! 
+!
+!
+!
+!
+!
+!
+!
+!
+interface Loopback0
+ description My loopback interface
+ ip address 11.11.11.11 255.255.255.255
+!
+interface FastEthernet0/0
+ ip address 192.168.122.2 255.255.255.0
+ duplex full
+!
+interface FastEthernet2/0
+ no ip address
+ shutdown
+ duplex full
+!
+ip forward-protocol nd
+!
+!
+no ip http server
+no ip http secure-server
+!
+!
+!
+!
+control-plane
+!
+!
+line con 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+ stopbits 1
+line aux 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+ stopbits 1
+line vty 0 4
+ login local
+ transport input ssh
+!
+!
+end
+
+INFO:paramiko.transport:Connected (version 1.99, client Cisco-1.25)
+INFO:paramiko.transport:Authentication (password) successful!
+INFO:netmiko:Output of show ip interface brief:
+Interface              IP-Address      OK? Method Status                Protocol
+FastEthernet0/0        192.168.122.2   YES NVRAM  up                    up      
+FastEthernet2/0        unassigned      YES unset  administratively down down    
+Loopback0              11.11.11.11     YES manual up                    up      
+INFO:netmiko:Output of configuration commands:
+configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+shawkiRouter(config)#interface loopback 0
+shawkiRouter(config-if)#ip address 11.11.11.11 255.255.255.255
+shawkiRouter(config-if)#no shut
+shawkiRouter(config-if)#exit
+shawkiRouter(config)#do write memory
+Building configuration...
+[OK]
+shawkiRouter(config)#end
+shawkiRouter#
+INFO:netmiko:Output of show run brief:
+Building configuration...
+
+Current configuration : 1166 bytes
+!
+! Last configuration change at 04:48:28 UTC Wed Mar 20 2024 by shawki
+!
+version 15.2
+service timestamps debug datetime msec
+service timestamps log datetime msec
+!
+hostname shawkiRouter
+!
+boot-start-marker
+boot-end-marker
+!
+!
+enable secret 4 9ZAcADji.hxi7By8wLltz/MlI4nw2F2How0PljTGjAE
+!
+no aaa new-model
+no ip icmp rate-limit unreachable
+!
+!
+!
+!
+!
+!
+no ip domain lookup
+ip domain name shawki.com
+ip cef
+no ipv6 cef
+!
+!
+multilink bundle-name authenticated
+!
+!
+!
+!
+!
+!
+!
+username shawki password 0 ********
+username shawkiRouter password 0 ********
+!
+!
+!
+!
+!
+ip tcp synwait-time 5
+! 
+!
+!
+!
+!
+!
+!
+!
+!
+interface Loopback0
+ description My loopback interface
+ ip address 11.11.11.11 255.255.255.255
+!
+interface FastEthernet0/0
+ ip address 192.168.122.2 255.255.255.0
+ duplex full
+!
+interface FastEthernet2/0
+ no ip address
+ shutdown
+ duplex full
+!
+ip forward-protocol nd
+!
+!
+no ip http server
+no ip http secure-server
+!
+!
+!
+!
+control-plane
+!
+!
+line con 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+ stopbits 1
+line aux 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+ stopbits 1
+line vty 0 4
+ login local
+ transport input ssh
+!
+!
+end
+
+INFO:netmiko:Backup of configuration:
+Building configuration...
+
+Current configuration : 1166 bytes
+!
+! Last configuration change at 04:48:28 UTC Wed Mar 20 2024 by shawki
+!
+version 15.2
+service timestamps debug datetime msec
+service timestamps log datetime msec
+!
+hostname shawkiRouter
+!
+boot-start-marker
+boot-end-marker
+!
+!
+enable secret 4 9ZAcADji.hxi7By8wLltz/MlI4nw2F2How0PljTGjAE
+!
+no aaa new-model
+no ip icmp rate-limit unreachable
+!
+!
+!
+!
+!
+!
+no ip domain lookup
+ip domain name shawki.com
+ip cef
+no ipv6 cef
+!
+!
+multilink bundle-name authenticated
+!
+!
+!
+!
+!
+!
+!
+username shawki password 0 ********
+username shawkiRouter password 0 ********
+!
+!
+!
+!
+!
+ip tcp synwait-time 5
+! 
+!
+!
+!
+!
+!
+!
+!
+!
+interface Loopback0
+ description My loopback interface
+ ip address 11.11.11.11 255.255.255.255
+!
+interface FastEthernet0/0
+ ip address 192.168.122.2 255.255.255.0
+ duplex full
+!
+interface FastEthernet2/0
+ no ip address
+ shutdown
+ duplex full
+!
+ip forward-protocol nd
+!
+!
+no ip http server
+no ip http secure-server
+!
+!
+!
+!
+control-plane
+!
+!
+line con 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+ stopbits 1
+line aux 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+ stopbits 1
+line vty 0 4
+ login local
+ transport input ssh
+!
+!
+end
+
+INFO:paramiko.transport:Connected (version 1.99, client Cisco-1.25)
+INFO:paramiko.transport:Authentication (password) successful!
+INFO:netmiko:Output of show ip interface brief:
+Interface              IP-Address      OK? Method Status                Protocol
+FastEthernet0/0        192.168.122.2   YES NVRAM  up                    up      
+FastEthernet2/0        unassigned      YES unset  administratively down down    
+Loopback0              11.11.11.11     YES manual up                    up      
+INFO:netmiko:Output of configuration commands:
+configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+shawkiRouter(config)#interface loopback 0
+shawkiRouter(config-if)#ip address 11.11.11.11 255.255.255.255
+shawkiRouter(config-if)#no shut
+shawkiRouter(config-if)#exit
+shawkiRouter(config)#do write memory
+Building configuration...
+[OK]
+shawkiRouter(config)#end
+shawkiRouter#
+INFO:netmiko:Output of show run brief:
+Building configuration...
+
+Current configuration : 1166 bytes
+!
+! Last configuration change at 04:49:27 UTC Wed Mar 20 2024 by shawki
+!
+version 15.2
+service timestamps debug datetime msec
+service timestamps log datetime msec
+!
+hostname shawkiRouter
+!
+boot-start-marker
+boot-end-marker
+!
+!
+enable secret 4 9ZAcADji.hxi7By8wLltz/MlI4nw2F2How0PljTGjAE
+!
+no aaa new-model
+no ip icmp rate-limit unreachable
+!
+!
+!
+!
+!
+!
+no ip domain lookup
+ip domain name shawki.com
+ip cef
+no ipv6 cef
+!
+!
+multilink bundle-name authenticated
+!
+!
+!
+!
+!
+!
+!
+username shawki password 0 ********
+username shawkiRouter password 0 ********
+!
+!
+!
+!
+!
+ip tcp synwait-time 5
+! 
+!
+!
+!
+!
+!
+!
+!
+!
+interface Loopback0
+ description My loopback interface
+ ip address 11.11.11.11 255.255.255.255
+!
+interface FastEthernet0/0
+ ip address 192.168.122.2 255.255.255.0
+ duplex full
+!
+interface FastEthernet2/0
+ no ip address
+ shutdown
+ duplex full
+!
+ip forward-protocol nd
+!
+!
+no ip http server
+no ip http secure-server
+!
+!
+!
+!
+control-plane
+!
+!
+line con 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+ stopbits 1
+line aux 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+ stopbits 1
+line vty 0 4
+ login local
+ transport input ssh
+!
+!
+end
+
+INFO:netmiko:Backup of configuration:
+Building configuration...
+
+Current configuration : 1166 bytes
+!
+! Last configuration change at 04:49:27 UTC Wed Mar 20 2024 by shawki
+!
+version 15.2
+service timestamps debug datetime msec
+service timestamps log datetime msec
+!
+hostname shawkiRouter
+!
+boot-start-marker
+boot-end-marker
+!
+!
+enable secret 4 9ZAcADji.hxi7By8wLltz/MlI4nw2F2How0PljTGjAE
+!
+no aaa new-model
+no ip icmp rate-limit unreachable
+!
+!
+!
+!
+!
+!
+no ip domain lookup
+ip domain name shawki.com
+ip cef
+no ipv6 cef
+!
+!
+multilink bundle-name authenticated
+!
+!
+!
+!
+!
+!
+!
+username shawki password 0 ********
+username shawkiRouter password 0 ********
+!
+!
+!
+!
+!
+ip tcp synwait-time 5
+! 
+!
+!
+!
+!
+!
+!
+!
+!
+interface Loopback0
+ description My loopback interface
+ ip address 11.11.11.11 255.255.255.255
+!
+interface FastEthernet0/0
+ ip address 192.168.122.2 255.255.255.0
+ duplex full
+!
+interface FastEthernet2/0
+ no ip address
+ shutdown
+ duplex full
+!
+ip forward-protocol nd
+!
+!
+no ip http server
+no ip http secure-server
+!
+!
+!
+!
+control-plane
+!
+!
+line con 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+ stopbits 1
+line aux 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+ stopbits 1
+line vty 0 4
+ login local
+ transport input ssh
+!
+!
+end
+
+INFO:paramiko.transport:Connected (version 1.99, client Cisco-1.25)
+INFO:paramiko.transport:Authentication (password) successful!
+INFO:netmiko:Output of show ip interface brief:
+Interface              IP-Address      OK? Method Status                Protocol
+FastEthernet0/0        192.168.122.2   YES NVRAM  up                    up      
+FastEthernet2/0        unassigned      YES unset  administratively down down    
+Loopback0              11.11.11.11     YES manual up                    up      
+INFO:netmiko:Output of configuration commands:
+configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+shawkiRouter(config)#interface loopback 0
+shawkiRouter(config-if)#ip address 11.11.11.11 255.255.255.255
+shawkiRouter(config-if)#no shut
+shawkiRouter(config-if)#exit
+shawkiRouter(config)#do write memory
+Building configuration...
+[OK]
+shawkiRouter(config)#end
+shawkiRouter#
+INFO:netmiko:Output of show run brief:
+Building configuration...
+
+Current configuration : 1166 bytes
+!
+! Last configuration change at 04:55:12 UTC Wed Mar 20 2024 by shawki
+!
+version 15.2
+service timestamps debug datetime msec
+service timestamps log datetime msec
+!
+hostname shawkiRouter
+!
+boot-start-marker
+boot-end-marker
+!
+!
+enable secret 4 9ZAcADji.hxi7By8wLltz/MlI4nw2F2How0PljTGjAE
+!
+no aaa new-model
+no ip icmp rate-limit unreachable
+!
+!
+!
+!
+!
+!
+no ip domain lookup
+ip domain name shawki.com
+ip cef
+no ipv6 cef
+!
+!
+multilink bundle-name authenticated
+!
+!
+!
+!
+!
+!
+!
+username shawki password 0 ********
+username shawkiRouter password 0 ********
+!
+!
+!
+!
+!
+ip tcp synwait-time 5
+! 
+!
+!
+!
+!
+!
+!
+!
+!
+interface Loopback0
+ description My loopback interface
+ ip address 11.11.11.11 255.255.255.255
+!
+interface FastEthernet0/0
+ ip address 192.168.122.2 255.255.255.0
+ duplex full
+!
+interface FastEthernet2/0
+ no ip address
+ shutdown
+ duplex full
+!
+ip forward-protocol nd
+!
+!
+no ip http server
+no ip http secure-server
+!
+!
+!
+!
+control-plane
+!
+!
+line con 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+ stopbits 1
+line aux 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+ stopbits 1
+line vty 0 4
+ login local
+ transport input ssh
+!
+!
+end
+
+INFO:netmiko:Routine Backup of configuration:
+Building configuration...
+
+Current configuration : 1166 bytes
+!
+! Last configuration change at 04:55:12 UTC Wed Mar 20 2024 by shawki
+!
+version 15.2
+service timestamps debug datetime msec
+service timestamps log datetime msec
+!
+hostname shawkiRouter
+!
+boot-start-marker
+boot-end-marker
+!
+!
+enable secret 4 9ZAcADji.hxi7By8wLltz/MlI4nw2F2How0PljTGjAE
+!
+no aaa new-model
+no ip icmp rate-limit unreachable
+!
+!
+!
+!
+!
+!
+no ip domain lookup
+ip domain name shawki.com
+ip cef
+no ipv6 cef
+!
+!
+multilink bundle-name authenticated
+!
+!
+!
+!
+!
+!
+!
+username shawki password 0 ********
+username shawkiRouter password 0 ********
+!
+!
+!
+!
+!
+ip tcp synwait-time 5
+! 
+!
+!
+!
+!
+!
+!
+!
+!
+interface Loopback0
+ description My loopback interface
+ ip address 11.11.11.11 255.255.255.255
+!
+interface FastEthernet0/0
+ ip address 192.168.122.2 255.255.255.0
+ duplex full
+!
+interface FastEthernet2/0
+ no ip address
+ shutdown
+ duplex full
+!
+ip forward-protocol nd
+!
+!
+no ip http server
+no ip http secure-server
+!
+!
+!
+!
+control-plane
+!
+!
+line con 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+ stopbits 1
+line aux 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+ stopbits 1
+line vty 0 4
+ login local
+ transport input ssh
+!
+!
+end
+
+INFO:paramiko.transport:Connected (version 1.99, client Cisco-1.25)
+INFO:paramiko.transport:Authentication (password) successful!
+INFO:netmiko:Output of show ip interface brief:
+Interface              IP-Address      OK? Method Status                Protocol
+FastEthernet0/0        192.168.122.2   YES NVRAM  up                    up      
+FastEthernet2/0        unassigned      YES unset  administratively down down    
+Loopback0              11.11.11.11     YES manual up                    up      
+INFO:netmiko:Output of configuration commands:
+configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+shawkiRouter(config)#interface loopback 0
+shawkiRouter(config-if)#ip address 11.11.11.11 255.255.255.255
+shawkiRouter(config-if)#no shut
+shawkiRouter(config-if)#exit
+shawkiRouter(config)#do write memory
+Building configuration...
+[OK]
+shawkiRouter(config)#end
+shawkiRouter#
+INFO:netmiko:Output of show run brief:
+Building configuration...
+
+Current configuration : 1166 bytes
+!
+! Last configuration change at 05:40:36 UTC Wed Mar 20 2024 by shawki
+!
+version 15.2
+service timestamps debug datetime msec
+service timestamps log datetime msec
+!
+hostname shawkiRouter
+!
+boot-start-marker
+boot-end-marker
+!
+!
+enable secret 4 9ZAcADji.hxi7By8wLltz/MlI4nw2F2How0PljTGjAE
+!
+no aaa new-model
+no ip icmp rate-limit unreachable
+!
+!
+!
+!
+!
+!
+no ip domain lookup
+ip domain name shawki.com
+ip cef
+no ipv6 cef
+!
+!
+multilink bundle-name authenticated
+!
+!
+!
+!
+!
+!
+!
+username shawki password 0 ********
+username shawkiRouter password 0 ********
+!
+!
+!
+!
+!
+ip tcp synwait-time 5
+! 
+!
+!
+!
+!
+!
+!
+!
+!
+interface Loopback0
+ description My loopback interface
+ ip address 11.11.11.11 255.255.255.255
+!
+interface FastEthernet0/0
+ ip address 192.168.122.2 255.255.255.0
+ duplex full
+!
+interface FastEthernet2/0
+ no ip address
+ shutdown
+ duplex full
+!
+ip forward-protocol nd
+!
+!
+no ip http server
+no ip http secure-server
+!
+!
+!
+!
+control-plane
+!
+!
+line con 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+ stopbits 1
+line aux 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+ stopbits 1
+line vty 0 4
+ login local
+ transport input ssh
+!
+!
+end
+
+INFO:netmiko:Routine Backup of configuration:
+Building configuration...
+
+Current configuration : 1166 bytes
+!
+! Last configuration change at 05:40:36 UTC Wed Mar 20 2024 by shawki
+!
+version 15.2
+service timestamps debug datetime msec
+service timestamps log datetime msec
+!
+hostname shawkiRouter
+!
+boot-start-marker
+boot-end-marker
+!
+!
+enable secret 4 9ZAcADji.hxi7By8wLltz/MlI4nw2F2How0PljTGjAE
+!
+no aaa new-model
+no ip icmp rate-limit unreachable
+!
+!
+!
+!
+!
+!
+no ip domain lookup
+ip domain name shawki.com
+ip cef
+no ipv6 cef
+!
+!
+multilink bundle-name authenticated
+!
+!
+!
+!
+!
+!
+!
+username shawki password 0 ********
+username shawkiRouter password 0 ********
+!
+!
+!
+!
+!
+ip tcp synwait-time 5
+! 
+!
+!
+!
+!
+!
+!
+!
+!
+interface Loopback0
+ description My loopback interface
+ ip address 11.11.11.11 255.255.255.255
+!
+interface FastEthernet0/0
+ ip address 192.168.122.2 255.255.255.0
+ duplex full
+!
+interface FastEthernet2/0
+ no ip address
+ shutdown
+ duplex full
+!
+ip forward-protocol nd
+!
+!
+no ip http server
+no ip http secure-server
+!
+!
+!
+!
+control-plane
+!
+!
+line con 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+ stopbits 1
+line aux 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+ stopbits 1
+line vty 0 4
+ login local
+ transport input ssh
+!
+!
+end
+
+INFO:paramiko.transport:Connected (version 1.99, client Cisco-1.25)
+INFO:paramiko.transport:Authentication (password) successful!
+INFO:paramiko.transport:Connected (version 1.99, client Cisco-1.25)
+INFO:paramiko.transport:Authentication (password) successful!
+INFO:netmiko:Output of show ip interface brief:
+Interface              IP-Address      OK? Method Status                Protocol
+FastEthernet0/0        192.168.122.2   YES NVRAM  up                    up      
+FastEthernet2/0        unassigned      YES unset  administratively down down    
+Loopback0              11.11.11.11     YES manual up                    up      
+INFO:netmiko:Output of configuration commands:
+configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+shawkiRouter(config)#interface loopback
+% Incomplete command.
+
+shawkiRouter(config)#ip address 11.11.11.11 255.255.255.255
+                               ^
+% Invalid input detected at '^' marker.
+
+shawkiRouter(config)#no shut
+                          ^
+% Invalid input detected at '^' marker.
+
+shawkiRouter(config)#exit
+shawkiRouter#do write memory
+               ^
+% Invalid input detected at '^' marker.
+
+shawkiRouter#
+INFO:netmiko:Output of show run brief:
+Building configuration...
+
+Current configuration : 1166 bytes
+!
+! Last configuration change at 05:43:07 UTC Wed Mar 20 2024 by shawki
+!
+version 15.2
+service timestamps debug datetime msec
+service timestamps log datetime msec
+!
+hostname shawkiRouter
+!
+boot-start-marker
+boot-end-marker
+!
+!
+enable secret 4 9ZAcADji.hxi7By8wLltz/MlI4nw2F2How0PljTGjAE
+!
+no aaa new-model
+no ip icmp rate-limit unreachable
+!
+!
+!
+!
+!
+!
+no ip domain lookup
+ip domain name shawki.com
+ip cef
+no ipv6 cef
+!
+!
+multilink bundle-name authenticated
+!
+!
+!
+!
+!
+!
+!
+username shawki password 0 ********
+username shawkiRouter password 0 ********
+!
+!
+!
+!
+!
+ip tcp synwait-time 5
+! 
+!
+!
+!
+!
+!
+!
+!
+!
+interface Loopback0
+ description My loopback interface
+ ip address 11.11.11.11 255.255.255.255
+!
+interface FastEthernet0/0
+ ip address 192.168.122.2 255.255.255.0
+ duplex full
+!
+interface FastEthernet2/0
+ no ip address
+ shutdown
+ duplex full
+!
+ip forward-protocol nd
+!
+!
+no ip http server
+no ip http secure-server
+!
+!
+!
+!
+control-plane
+!
+!
+line con 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+ stopbits 1
+line aux 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+ stopbits 1
+line vty 0 4
+ login local
+ transport input ssh
+!
+!
+end
+
+INFO:netmiko:Routine Backup of configuration:
+Building configuration...
+
+Current configuration : 1166 bytes
+!
+! Last configuration change at 05:43:07 UTC Wed Mar 20 2024 by shawki
+!
+version 15.2
+service timestamps debug datetime msec
+service timestamps log datetime msec
+!
+hostname shawkiRouter
+!
+boot-start-marker
+boot-end-marker
+!
+!
+enable secret 4 9ZAcADji.hxi7By8wLltz/MlI4nw2F2How0PljTGjAE
+!
+no aaa new-model
+no ip icmp rate-limit unreachable
+!
+!
+!
+!
+!
+!
+no ip domain lookup
+ip domain name shawki.com
+ip cef
+no ipv6 cef
+!
+!
+multilink bundle-name authenticated
+!
+!
+!
+!
+!
+!
+!
+username shawki password 0 ********
+username shawkiRouter password 0 ********
+!
+!
+!
+!
+!
+ip tcp synwait-time 5
+! 
+!
+!
+!
+!
+!
+!
+!
+!
+interface Loopback0
+ description My loopback interface
+ ip address 11.11.11.11 255.255.255.255
+!
+interface FastEthernet0/0
+ ip address 192.168.122.2 255.255.255.0
+ duplex full
+!
+interface FastEthernet2/0
+ no ip address
+ shutdown
+ duplex full
+!
+ip forward-protocol nd
+!
+!
+no ip http server
+no ip http secure-server
+!
+!
+!
+!
+control-plane
+!
+!
+line con 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+ stopbits 1
+line aux 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+ stopbits 1
+line vty 0 4
+ login local
+ transport input ssh
+!
+!
+end
+
+INFO:paramiko.transport:Connected (version 1.99, client Cisco-1.25)
+INFO:paramiko.transport:Authentication (password) successful!
+INFO:netmiko:Output of show ip interface brief:
+Interface              IP-Address      OK? Method Status                Protocol
+FastEthernet0/0        192.168.122.2   YES NVRAM  up                    up      
+FastEthernet2/0        unassigned      YES unset  administratively down down    
+Loopback0              11.11.11.11     YES manual up                    up      
+INFO:netmiko:Output of configuration commands:
+configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+shawkiRouter(config)#interface loopback 0
+shawkiRouter(config-if)#ip address 11.11.11.11 255.255.255.255
+shawkiRouter(config-if)#no shut
+shawkiRouter(config-if)#exit
+shawkiRouter(config)#do write memory
+Building configuration...
+[OK]
+shawkiRouter(config)#end
+shawkiRouter#
+INFO:netmiko:Output of show run brief:
+Building configuration...
+
+Current configuration : 1166 bytes
+!
+! Last configuration change at 05:44:11 UTC Wed Mar 20 2024 by shawki
+!
+version 15.2
+service timestamps debug datetime msec
+service timestamps log datetime msec
+!
+hostname shawkiRouter
+!
+boot-start-marker
+boot-end-marker
+!
+!
+enable secret 4 9ZAcADji.hxi7By8wLltz/MlI4nw2F2How0PljTGjAE
+!
+no aaa new-model
+no ip icmp rate-limit unreachable
+!
+!
+!
+!
+!
+!
+no ip domain lookup
+ip domain name shawki.com
+ip cef
+no ipv6 cef
+!
+!
+multilink bundle-name authenticated
+!
+!
+!
+!
+!
+!
+!
+username shawki password 0 ********
+username shawkiRouter password 0 ********
+!
+!
+!
+!
+!
+ip tcp synwait-time 5
+! 
+!
+!
+!
+!
+!
+!
+!
+!
+interface Loopback0
+ description My loopback interface
+ ip address 11.11.11.11 255.255.255.255
+!
+interface FastEthernet0/0
+ ip address 192.168.122.2 255.255.255.0
+ duplex full
+!
+interface FastEthernet2/0
+ no ip address
+ shutdown
+ duplex full
+!
+ip forward-protocol nd
+!
+!
+no ip http server
+no ip http secure-server
+!
+!
+!
+!
+control-plane
+!
+!
+line con 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+ stopbits 1
+line aux 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+ stopbits 1
+line vty 0 4
+ login local
+ transport input ssh
+!
+!
+end
+
+INFO:netmiko:Routine Backup of configuration:
+Building configuration...
+
+Current configuration : 1166 bytes
+!
+! Last configuration change at 05:44:11 UTC Wed Mar 20 2024 by shawki
+!
+version 15.2
+service timestamps debug datetime msec
+service timestamps log datetime msec
+!
+hostname shawkiRouter
+!
+boot-start-marker
+boot-end-marker
+!
+!
+enable secret 4 9ZAcADji.hxi7By8wLltz/MlI4nw2F2How0PljTGjAE
+!
+no aaa new-model
+no ip icmp rate-limit unreachable
+!
+!
+!
+!
+!
+!
+no ip domain lookup
+ip domain name shawki.com
+ip cef
+no ipv6 cef
+!
+!
+multilink bundle-name authenticated
+!
+!
+!
+!
+!
+!
+!
+username shawki password 0 ********
+username shawkiRouter password 0 ********
+!
+!
+!
+!
+!
+ip tcp synwait-time 5
+! 
+!
+!
+!
+!
+!
+!
+!
+!
+interface Loopback0
+ description My loopback interface
+ ip address 11.11.11.11 255.255.255.255
+!
+interface FastEthernet0/0
+ ip address 192.168.122.2 255.255.255.0
+ duplex full
+!
+interface FastEthernet2/0
+ no ip address
+ shutdown
+ duplex full
+!
+ip forward-protocol nd
+!
+!
+no ip http server
+no ip http secure-server
+!
+!
+!
+!
+control-plane
+!
+!
+line con 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+ stopbits 1
+line aux 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+ stopbits 1
+line vty 0 4
+ login local
+ transport input ssh
+!
+!
+end
+
+INFO:paramiko.transport:Connected (version 1.99, client Cisco-1.25)
+INFO:paramiko.transport:Authentication (password) failed.
+INFO:paramiko.transport:Connected (version 1.99, client Cisco-1.25)
+INFO:paramiko.transport:Authentication (password) successful!
+INFO:netmiko:Output of show ip interface brief:
+Interface              IP-Address      OK? Method Status                Protocol
+FastEthernet0/0        192.168.122.2   YES NVRAM  up                    up      
+FastEthernet2/0        unassigned      YES unset  administratively down down    
+Loopback0              11.11.11.11     YES manual up                    up      
+INFO:paramiko.transport:Connected (version 1.99, client Cisco-1.25)
+INFO:paramiko.transport:Authentication (password) successful!
+INFO:netmiko:Output of show ip interface brief:
+Interface              IP-Address      OK? Method Status                Protocol
+FastEthernet0/0        192.168.122.2   YES NVRAM  up                    up      
+FastEthernet2/0        unassigned      YES unset  administratively down down    
+Loopback0              11.11.11.11     YES manual up                    up      
+INFO:netmiko:Output of configuration commands:
+configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+shawkiRouter(config)#interface loopback 0
+shawkiRouter(config-if)#ip address 11.11.11.11 255.255.255.255
+shawkiRouter(config-if)#no shut
+shawkiRouter(config-if)#exit
+shawkiRouter(config)#do write memory
+Building configuration...
+[OK]
+shawkiRouter(config)#end
+shawkiRouter#
+INFO:netmiko:Output of show run brief:
+Building configuration...
+
+Current configuration : 1166 bytes
+!
+! Last configuration change at 05:52:40 UTC Wed Mar 20 2024 by shawki
+!
+version 15.2
+service timestamps debug datetime msec
+service timestamps log datetime msec
+!
+hostname shawkiRouter
+!
+boot-start-marker
+boot-end-marker
+!
+!
+enable secret 4 9ZAcADji.hxi7By8wLltz/MlI4nw2F2How0PljTGjAE
+!
+no aaa new-model
+no ip icmp rate-limit unreachable
+!
+!
+!
+!
+!
+!
+no ip domain lookup
+ip domain name shawki.com
+ip cef
+no ipv6 cef
+!
+!
+multilink bundle-name authenticated
+!
+!
+!
+!
+!
+!
+!
+username shawki password 0 ********
+username shawkiRouter password 0 ********
+!
+!
+!
+!
+!
+ip tcp synwait-time 5
+! 
+!
+!
+!
+!
+!
+!
+!
+!
+interface Loopback0
+ description My loopback interface
+ ip address 11.11.11.11 255.255.255.255
+!
+interface FastEthernet0/0
+ ip address 192.168.122.2 255.255.255.0
+ duplex full
+!
+interface FastEthernet2/0
+ no ip address
+ shutdown
+ duplex full
+!
+ip forward-protocol nd
+!
+!
+no ip http server
+no ip http secure-server
+!
+!
+!
+!
+control-plane
+!
+!
+line con 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+ stopbits 1
+line aux 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+ stopbits 1
+line vty 0 4
+ login local
+ transport input ssh
+!
+!
+end
+
+INFO:netmiko:Routine Backup of configuration:
+Building configuration...
+
+Current configuration : 1166 bytes
+!
+! Last configuration change at 05:52:40 UTC Wed Mar 20 2024 by shawki
+!
+version 15.2
+service timestamps debug datetime msec
+service timestamps log datetime msec
+!
+hostname shawkiRouter
+!
+boot-start-marker
+boot-end-marker
+!
+!
+enable secret 4 9ZAcADji.hxi7By8wLltz/MlI4nw2F2How0PljTGjAE
+!
+no aaa new-model
+no ip icmp rate-limit unreachable
+!
+!
+!
+!
+!
+!
+no ip domain lookup
+ip domain name shawki.com
+ip cef
+no ipv6 cef
+!
+!
+multilink bundle-name authenticated
+!
+!
+!
+!
+!
+!
+!
+username shawki password 0 ********
+username shawkiRouter password 0 ********
+!
+!
+!
+!
+!
+ip tcp synwait-time 5
+! 
+!
+!
+!
+!
+!
+!
+!
+!
+interface Loopback0
+ description My loopback interface
+ ip address 11.11.11.11 255.255.255.255
+!
+interface FastEthernet0/0
+ ip address 192.168.122.2 255.255.255.0
+ duplex full
+!
+interface FastEthernet2/0
+ no ip address
+ shutdown
+ duplex full
+!
+ip forward-protocol nd
+!
+!
+no ip http server
+no ip http secure-server
+!
+!
+!
+!
+control-plane
+!
+!
+line con 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+ stopbits 1
+line aux 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+ stopbits 1
+line vty 0 4
+ login local
+ transport input ssh
+!
+!
+end
+
+INFO:paramiko.transport:Connected (version 1.99, client Cisco-1.25)
+INFO:paramiko.transport:Authentication (password) failed.
+INFO:paramiko.transport:Connected (version 1.99, client Cisco-1.25)
+INFO:paramiko.transport:Authentication (password) successful!
+INFO:netmiko:Output of show ip interface brief:
+Interface              IP-Address      OK? Method Status                Protocol
+FastEthernet0/0        192.168.122.2   YES NVRAM  up                    up      
+FastEthernet2/0        unassigned      YES unset  administratively down down    
+Loopback0              11.11.11.11     YES manual up                    up      
+INFO:netmiko:Output of configuration commands:
+configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+shawkiRouter(config)#interface loopback 0
+shawkiRouter(config-if)#ip address 11.11.11.11 255.255.255.255
+shawkiRouter(config-if)#no shut
+shawkiRouter(config-if)#exit
+shawkiRouter(config)#do write memory
+Building configuration...
+[OK]
+shawkiRouter(config)#end
+shawkiRouter#
+INFO:netmiko:Output of show run brief:
+Building configuration...
+
+Current configuration : 1166 bytes
+!
+! Last configuration change at 05:53:33 UTC Wed Mar 20 2024 by shawki
+!
+version 15.2
+service timestamps debug datetime msec
+service timestamps log datetime msec
+!
+hostname shawkiRouter
+!
+boot-start-marker
+boot-end-marker
+!
+!
+enable secret 4 9ZAcADji.hxi7By8wLltz/MlI4nw2F2How0PljTGjAE
+!
+no aaa new-model
+no ip icmp rate-limit unreachable
+!
+!
+!
+!
+!
+!
+no ip domain lookup
+ip domain name shawki.com
+ip cef
+no ipv6 cef
+!
+!
+multilink bundle-name authenticated
+!
+!
+!
+!
+!
+!
+!
+username shawki password 0 ********
+username shawkiRouter password 0 ********
+!
+!
+!
+!
+!
+ip tcp synwait-time 5
+! 
+!
+!
+!
+!
+!
+!
+!
+!
+interface Loopback0
+ description My loopback interface
+ ip address 11.11.11.11 255.255.255.255
+!
+interface FastEthernet0/0
+ ip address 192.168.122.2 255.255.255.0
+ duplex full
+!
+interface FastEthernet2/0
+ no ip address
+ shutdown
+ duplex full
+!
+ip forward-protocol nd
+!
+!
+no ip http server
+no ip http secure-server
+!
+!
+!
+!
+control-plane
+!
+!
+line con 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+ stopbits 1
+line aux 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+ stopbits 1
+line vty 0 4
+ login local
+ transport input ssh
+!
+!
+end
+
+INFO:netmiko:Routine Backup of configuration:
+Building configuration...
+
+Current configuration : 1166 bytes
+!
+! Last configuration change at 05:53:33 UTC Wed Mar 20 2024 by shawki
+!
+version 15.2
+service timestamps debug datetime msec
+service timestamps log datetime msec
+!
+hostname shawkiRouter
+!
+boot-start-marker
+boot-end-marker
+!
+!
+enable secret 4 9ZAcADji.hxi7By8wLltz/MlI4nw2F2How0PljTGjAE
+!
+no aaa new-model
+no ip icmp rate-limit unreachable
+!
+!
+!
+!
+!
+!
+no ip domain lookup
+ip domain name shawki.com
+ip cef
+no ipv6 cef
+!
+!
+multilink bundle-name authenticated
+!
+!
+!
+!
+!
+!
+!
+username shawki password 0 ********
+username shawkiRouter password 0 ********
+!
+!
+!
+!
+!
+ip tcp synwait-time 5
+! 
+!
+!
+!
+!
+!
+!
+!
+!
+interface Loopback0
+ description My loopback interface
+ ip address 11.11.11.11 255.255.255.255
+!
+interface FastEthernet0/0
+ ip address 192.168.122.2 255.255.255.0
+ duplex full
+!
+interface FastEthernet2/0
+ no ip address
+ shutdown
+ duplex full
+!
+ip forward-protocol nd
+!
+!
+no ip http server
+no ip http secure-server
+!
+!
+!
+!
+control-plane
+!
+!
+line con 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+ stopbits 1
+line aux 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+ stopbits 1
+line vty 0 4
+ login local
+ transport input ssh
+!
+!
+end
+
+INFO:paramiko.transport:Connected (version 1.99, client Cisco-1.25)
+INFO:paramiko.transport:Authentication (password) successful!
+INFO:netmiko:Output of show ip interface brief:
+Interface              IP-Address      OK? Method Status                Protocol
+FastEthernet0/0        192.168.122.2   YES NVRAM  up                    up      
+FastEthernet1/0        unassigned      YES unset  administratively down down    
+FastEthernet2/0        unassigned      YES NVRAM  administratively down down    
+Loopback0              11.11.11.11     YES NVRAM  up                    up      
+INFO:paramiko.transport:Connected (version 1.99, client Cisco-1.25)
+INFO:paramiko.transport:Authentication (password) successful!
+INFO:netmiko:Output of show ip interface brief:
+Interface              IP-Address      OK? Method Status                Protocol
+FastEthernet0/0        192.168.122.2   YES NVRAM  up                    up      
+FastEthernet1/0        unassigned      YES unset  administratively down down    
+FastEthernet2/0        unassigned      YES NVRAM  administratively down down    
+Loopback0              11.11.11.1      YES manual up                    up      
+INFO:netmiko:Output of configuration commands:
+configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+R1(config)#interface loopback 0
+R1(config-if)#ip address 11.11.11.11 255.255.255.255
+R1(config-if)#no shut
+R1(config-if)#exit
+R1(config)#do write memory
+Building configuration...
+[OK]
+R1(config)#end
+R1#
+INFO:netmiko:Output of show run brief:
+Building configuration...
+
+Current configuration : 1177 bytes
+!
+! Last configuration change at 23:01:16 UTC Wed Mar 20 2024 by shawki
+!
+version 15.2
+service timestamps debug datetime msec
+service timestamps log datetime msec
+!
+hostname R1
+!
+boot-start-marker
+boot-end-marker
+!
+!
+enable secret 4 9ZAcADji.hxi7By8wLltz/MlI4nw2F2How0PljTGjAE
+!
+no aaa new-model
+no ip icmp rate-limit unreachable
+!
+!
+!
+!
+!
+!
+no ip domain lookup
+ip domain name shawki.com
+ip cef
+no ipv6 cef
+!
+!
+multilink bundle-name authenticated
+!
+!
+!
+!
+!
+!
+!
+username shawki password 0 ********
+!
+!
+!
+!
+!
+ip tcp synwait-time 5
+! 
+!
+!
+!
+!
+!
+!
+!
+!
+interface Loopback0
+ description My loopback interface
+ ip address 11.11.11.11 255.255.255.255
+!
+interface FastEthernet0/0
+ ip address 192.168.122.2 255.255.255.0
+ duplex full
+!
+interface FastEthernet1/0
+ no ip address
+ shutdown
+ duplex full
+!
+interface FastEthernet2/0
+ no ip address
+ shutdown
+ duplex full
+!
+ip forward-protocol nd
+!
+!
+no ip http server
+no ip http secure-server
+!
+!
+!
+!
+control-plane
+!
+!
+line con 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+ stopbits 1
+line aux 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+ stopbits 1
+line vty 0 4
+ login local
+ transport input ssh
+!
+!
+end
+
+INFO:netmiko:Routine Backup of configuration:
+Building configuration...
+
+Current configuration : 1177 bytes
+!
+! Last configuration change at 23:01:16 UTC Wed Mar 20 2024 by shawki
+!
+version 15.2
+service timestamps debug datetime msec
+service timestamps log datetime msec
+!
+hostname R1
+!
+boot-start-marker
+boot-end-marker
+!
+!
+enable secret 4 9ZAcADji.hxi7By8wLltz/MlI4nw2F2How0PljTGjAE
+!
+no aaa new-model
+no ip icmp rate-limit unreachable
+!
+!
+!
+!
+!
+!
+no ip domain lookup
+ip domain name shawki.com
+ip cef
+no ipv6 cef
+!
+!
+multilink bundle-name authenticated
+!
+!
+!
+!
+!
+!
+!
+username shawki password 0 ********
+!
+!
+!
+!
+!
+ip tcp synwait-time 5
+! 
+!
+!
+!
+!
+!
+!
+!
+!
+interface Loopback0
+ description My loopback interface
+ ip address 11.11.11.11 255.255.255.255
+!
+interface FastEthernet0/0
+ ip address 192.168.122.2 255.255.255.0
+ duplex full
+!
+interface FastEthernet1/0
+ no ip address
+ shutdown
+ duplex full
+!
+interface FastEthernet2/0
+ no ip address
+ shutdown
+ duplex full
+!
+ip forward-protocol nd
+!
+!
+no ip http server
+no ip http secure-server
+!
+!
+!
+!
+control-plane
+!
+!
+line con 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+ stopbits 1
+line aux 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+ stopbits 1
+line vty 0 4
+ login local
+ transport input ssh
+!
+!
+end
+
+INFO:paramiko.transport:Connected (version 1.99, client Cisco-1.25)
+INFO:paramiko.transport:Authentication (password) successful!
+INFO:netmiko:Output of show ip interface brief:
+Interface              IP-Address      OK? Method Status                Protocol
+FastEthernet0/0        192.168.122.2   YES NVRAM  up                    up      
+FastEthernet1/0        unassigned      YES unset  administratively down down    
+Loopback0              11.11.11.11     YES manual up                    up      
+INFO:netmiko:Output of configuration commands:
+configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+R1(config)#interface loopback 0
+R1(config-if)#ip address 11.11.11.11 255.255.255.255
+R1(config-if)#no shut
+R1(config-if)#exit
+R1(config)#do write memory
+Building configuration...
+[OK]
+R1(config)#end
+R1#
+INFO:netmiko:Output of show run brief:
+Building configuration...
+
+Current configuration : 1076 bytes
+!
+! Last configuration change at 00:09:23 UTC Thu Mar 21 2024 by shawki
+!
+version 15.2
+service timestamps debug datetime msec
+service timestamps log datetime msec
+!
+hostname R1
+!
+boot-start-marker
+boot-end-marker
+!
+!
+enable secret 4 9ZAcADji.hxi7By8wLltz/MlI4nw2F2How0PljTGjAE
+!
+no aaa new-model
+no ip icmp rate-limit unreachable
+!
+!
+!
+!
+!
+!
+no ip domain lookup
+ip domain name shawki.com
+ip cef
+no ipv6 cef
+!
+!
+multilink bundle-name authenticated
+!
+!
+!
+!
+!
+!
+!
+username shawki password 0 ********
+!
+!
+!
+!
+!
+ip tcp synwait-time 5
+! 
+!
+!
+!
+!
+!
+!
+!
+!
+interface Loopback0
+ ip address 11.11.11.11 255.255.255.255
+!
+interface FastEthernet0/0
+ ip address 192.168.122.2 255.255.255.0
+ duplex full
+!
+interface FastEthernet1/0
+ no ip address
+ shutdown
+ duplex full
+!
+ip forward-protocol nd
+!
+!
+no ip http server
+no ip http secure-server
+!
+!
+!
+!
+control-plane
+!
+!
+line con 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+ stopbits 1
+line aux 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+ stopbits 1
+line vty 0 4
+ login local
+ transport input ssh
+!
+!
+end
+
+INFO:netmiko:Routine Backup of configuration:
+Building configuration...
+
+Current configuration : 1076 bytes
+!
+! Last configuration change at 00:09:23 UTC Thu Mar 21 2024 by shawki
+!
+version 15.2
+service timestamps debug datetime msec
+service timestamps log datetime msec
+!
+hostname R1
+!
+boot-start-marker
+boot-end-marker
+!
+!
+enable secret 4 9ZAcADji.hxi7By8wLltz/MlI4nw2F2How0PljTGjAE
+!
+no aaa new-model
+no ip icmp rate-limit unreachable
+!
+!
+!
+!
+!
+!
+no ip domain lookup
+ip domain name shawki.com
+ip cef
+no ipv6 cef
+!
+!
+multilink bundle-name authenticated
+!
+!
+!
+!
+!
+!
+!
+username shawki password 0 ********
+!
+!
+!
+!
+!
+ip tcp synwait-time 5
+! 
+!
+!
+!
+!
+!
+!
+!
+!
+interface Loopback0
+ ip address 11.11.11.11 255.255.255.255
+!
+interface FastEthernet0/0
+ ip address 192.168.122.2 255.255.255.0
+ duplex full
+!
+interface FastEthernet1/0
+ no ip address
+ shutdown
+ duplex full
+!
+ip forward-protocol nd
+!
+!
+no ip http server
+no ip http secure-server
+!
+!
+!
+!
+control-plane
+!
+!
+line con 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+ stopbits 1
+line aux 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+ stopbits 1
+line vty 0 4
+ login local
+ transport input ssh
+!
+!
+end
+
+INFO:paramiko.transport:Connected (version 1.99, client Cisco-1.25)
+INFO:paramiko.transport:Authentication (password) successful!
+INFO:netmiko:Output of show ip interface brief:
+Interface              IP-Address      OK? Method Status                Protocol
+FastEthernet0/0        192.168.122.2   YES NVRAM  up                    up      
+FastEthernet1/0        unassigned      YES unset  administratively down down    
+Loopback0              11.11.11.11     YES manual up                    up      
+INFO:netmiko:Output of configuration commands:
+configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+R1(config)#interface loopback 0
+R1(config-if)#ip address 11.11.11.11 255.255.255.255
+R1(config-if)#no shut
+R1(config-if)#exit
+R1(config)#do write memory
+Building configuration...
+[OK]
+R1(config)#end
+R1#
+INFO:netmiko:Output of show run brief:
+Building configuration...
+
+Current configuration : 1076 bytes
+!
+! Last configuration change at 00:10:57 UTC Thu Mar 21 2024 by shawki
+!
+version 15.2
+service timestamps debug datetime msec
+service timestamps log datetime msec
+!
+hostname R1
+!
+boot-start-marker
+boot-end-marker
+!
+!
+enable secret 4 9ZAcADji.hxi7By8wLltz/MlI4nw2F2How0PljTGjAE
+!
+no aaa new-model
+no ip icmp rate-limit unreachable
+!
+!
+!
+!
+!
+!
+no ip domain lookup
+ip domain name shawki.com
+ip cef
+no ipv6 cef
+!
+!
+multilink bundle-name authenticated
+!
+!
+!
+!
+!
+!
+!
+username shawki password 0 ********
+!
+!
+!
+!
+!
+ip tcp synwait-time 5
+! 
+!
+!
+!
+!
+!
+!
+!
+!
+interface Loopback0
+ ip address 11.11.11.11 255.255.255.255
+!
+interface FastEthernet0/0
+ ip address 192.168.122.2 255.255.255.0
+ duplex full
+!
+interface FastEthernet1/0
+ no ip address
+ shutdown
+ duplex full
+!
+ip forward-protocol nd
+!
+!
+no ip http server
+no ip http secure-server
+!
+!
+!
+!
+control-plane
+!
+!
+line con 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+ stopbits 1
+line aux 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+ stopbits 1
+line vty 0 4
+ login local
+ transport input ssh
+!
+!
+end
+
+INFO:netmiko:Routine Backup of configuration:
+Building configuration...
+
+Current configuration : 1076 bytes
+!
+! Last configuration change at 00:10:57 UTC Thu Mar 21 2024 by shawki
+!
+version 15.2
+service timestamps debug datetime msec
+service timestamps log datetime msec
+!
+hostname R1
+!
+boot-start-marker
+boot-end-marker
+!
+!
+enable secret 4 9ZAcADji.hxi7By8wLltz/MlI4nw2F2How0PljTGjAE
+!
+no aaa new-model
+no ip icmp rate-limit unreachable
+!
+!
+!
+!
+!
+!
+no ip domain lookup
+ip domain name shawki.com
+ip cef
+no ipv6 cef
+!
+!
+multilink bundle-name authenticated
+!
+!
+!
+!
+!
+!
+!
+username shawki password 0 ********
+!
+!
+!
+!
+!
+ip tcp synwait-time 5
+! 
+!
+!
+!
+!
+!
+!
+!
+!
+interface Loopback0
+ ip address 11.11.11.11 255.255.255.255
+!
+interface FastEthernet0/0
+ ip address 192.168.122.2 255.255.255.0
+ duplex full
+!
+interface FastEthernet1/0
+ no ip address
+ shutdown
+ duplex full
+!
+ip forward-protocol nd
+!
+!
+no ip http server
+no ip http secure-server
+!
+!
+!
+!
+control-plane
+!
+!
+line con 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+ stopbits 1
+line aux 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+ stopbits 1
+line vty 0 4
+ login local
+ transport input ssh
+!
+!
+end
+
+INFO:paramiko.transport:Connected (version 1.99, client Cisco-1.25)
+INFO:paramiko.transport:Authentication (password) failed.
+INFO:paramiko.transport:Connected (version 1.99, client Cisco-1.25)
+INFO:paramiko.transport:Authentication (password) failed.
+INFO:paramiko.transport:Connected (version 1.99, client Cisco-1.25)
+INFO:paramiko.transport:Authentication (password) successful!
+INFO:netmiko:Output of show ip interface brief:
+Interface              IP-Address      OK? Method Status                Protocol
+FastEthernet0/0        192.168.122.2   YES NVRAM  up                    up      
+FastEthernet1/0        unassigned      YES unset  administratively down down    
+Loopback0              11.11.11.11     YES manual up                    up      
+INFO:netmiko:Output of configuration commands:
+configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+R1(config)#interface loopback 0
+R1(config-if)#ip address 11.11.11.11 255.255.255.255
+R1(config-if)#no shut
+R1(config-if)#exit
+R1(config)#do write memory
+Building configuration...
+[OK]
+R1(config)#end
+R1#
+INFO:netmiko:Output of show run brief:
+Building configuration...
+
+Current configuration : 1076 bytes
+!
+! Last configuration change at 00:16:17 UTC Thu Mar 21 2024 by shawki
+!
+version 15.2
+service timestamps debug datetime msec
+service timestamps log datetime msec
+!
+hostname R1
+!
+boot-start-marker
+boot-end-marker
+!
+!
+enable secret 4 9ZAcADji.hxi7By8wLltz/MlI4nw2F2How0PljTGjAE
+!
+no aaa new-model
+no ip icmp rate-limit unreachable
+!
+!
+!
+!
+!
+!
+no ip domain lookup
+ip domain name shawki.com
+ip cef
+no ipv6 cef
+!
+!
+multilink bundle-name authenticated
+!
+!
+!
+!
+!
+!
+!
+username shawki password 0 ********
+!
+!
+!
+!
+!
+ip tcp synwait-time 5
+! 
+!
+!
+!
+!
+!
+!
+!
+!
+interface Loopback0
+ ip address 11.11.11.11 255.255.255.255
+!
+interface FastEthernet0/0
+ ip address 192.168.122.2 255.255.255.0
+ duplex full
+!
+interface FastEthernet1/0
+ no ip address
+ shutdown
+ duplex full
+!
+ip forward-protocol nd
+!
+!
+no ip http server
+no ip http secure-server
+!
+!
+!
+!
+control-plane
+!
+!
+line con 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+ stopbits 1
+line aux 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+ stopbits 1
+line vty 0 4
+ login local
+ transport input ssh
+!
+!
+end
+
+INFO:netmiko:Routine Backup of configuration:
+Building configuration...
+
+Current configuration : 1076 bytes
+!
+! Last configuration change at 00:16:17 UTC Thu Mar 21 2024 by shawki
+!
+version 15.2
+service timestamps debug datetime msec
+service timestamps log datetime msec
+!
+hostname R1
+!
+boot-start-marker
+boot-end-marker
+!
+!
+enable secret 4 9ZAcADji.hxi7By8wLltz/MlI4nw2F2How0PljTGjAE
+!
+no aaa new-model
+no ip icmp rate-limit unreachable
+!
+!
+!
+!
+!
+!
+no ip domain lookup
+ip domain name shawki.com
+ip cef
+no ipv6 cef
+!
+!
+multilink bundle-name authenticated
+!
+!
+!
+!
+!
+!
+!
+username shawki password 0 ********
+!
+!
+!
+!
+!
+ip tcp synwait-time 5
+! 
+!
+!
+!
+!
+!
+!
+!
+!
+interface Loopback0
+ ip address 11.11.11.11 255.255.255.255
+!
+interface FastEthernet0/0
+ ip address 192.168.122.2 255.255.255.0
+ duplex full
+!
+interface FastEthernet1/0
+ no ip address
+ shutdown
+ duplex full
+!
+ip forward-protocol nd
+!
+!
+no ip http server
+no ip http secure-server
+!
+!
+!
+!
+control-plane
+!
+!
+line con 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+ stopbits 1
+line aux 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+ stopbits 1
+line vty 0 4
+ login local
+ transport input ssh
+!
+!
+end
+
+INFO:paramiko.transport:Connected (version 1.99, client Cisco-1.25)
+INFO:paramiko.transport:Authentication (password) successful!
+INFO:netmiko:Output of show ip interface brief:
+Interface              IP-Address      OK? Method Status                Protocol
+FastEthernet0/0        192.168.122.2   YES NVRAM  up                    up      
+FastEthernet1/0        unassigned      YES unset  administratively down down    
+Loopback0              11.11.11.11     YES manual up                    up      
+INFO:netmiko:Output of configuration commands:
+configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+R1(config)#interface loopback 0
+R1(config-if)#ip address 11.11.11.11 255.255.255.255
+R1(config-if)#no shut
+R1(config-if)#exit
+R1(config)#do write memory
+Building configuration...
+[OK]
+R1(config)#end
+R1#
+INFO:netmiko:Output of show run brief:
+Building configuration...
+
+Current configuration : 1076 bytes
+!
+! Last configuration change at 00:27:06 UTC Thu Mar 21 2024 by shawki
+!
+version 15.2
+service timestamps debug datetime msec
+service timestamps log datetime msec
+!
+hostname R1
+!
+boot-start-marker
+boot-end-marker
+!
+!
+enable secret 4 9ZAcADji.hxi7By8wLltz/MlI4nw2F2How0PljTGjAE
+!
+no aaa new-model
+no ip icmp rate-limit unreachable
+!
+!
+!
+!
+!
+!
+no ip domain lookup
+ip domain name shawki.com
+ip cef
+no ipv6 cef
+!
+!
+multilink bundle-name authenticated
+!
+!
+!
+!
+!
+!
+!
+username shawki password 0 ********
+!
+!
+!
+!
+!
+ip tcp synwait-time 5
+! 
+!
+!
+!
+!
+!
+!
+!
+!
+interface Loopback0
+ ip address 11.11.11.11 255.255.255.255
+!
+interface FastEthernet0/0
+ ip address 192.168.122.2 255.255.255.0
+ duplex full
+!
+interface FastEthernet1/0
+ no ip address
+ shutdown
+ duplex full
+!
+ip forward-protocol nd
+!
+!
+no ip http server
+no ip http secure-server
+!
+!
+!
+!
+control-plane
+!
+!
+line con 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+ stopbits 1
+line aux 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+ stopbits 1
+line vty 0 4
+ login local
+ transport input ssh
+!
+!
+end
+
+INFO:netmiko:Routine Backup of configuration:
+Building configuration...
+
+Current configuration : 1076 bytes
+!
+! Last configuration change at 00:27:06 UTC Thu Mar 21 2024 by shawki
+!
+version 15.2
+service timestamps debug datetime msec
+service timestamps log datetime msec
+!
+hostname R1
+!
+boot-start-marker
+boot-end-marker
+!
+!
+enable secret 4 9ZAcADji.hxi7By8wLltz/MlI4nw2F2How0PljTGjAE
+!
+no aaa new-model
+no ip icmp rate-limit unreachable
+!
+!
+!
+!
+!
+!
+no ip domain lookup
+ip domain name shawki.com
+ip cef
+no ipv6 cef
+!
+!
+multilink bundle-name authenticated
+!
+!
+!
+!
+!
+!
+!
+username shawki password 0 ********
+!
+!
+!
+!
+!
+ip tcp synwait-time 5
+! 
+!
+!
+!
+!
+!
+!
+!
+!
+interface Loopback0
+ ip address 11.11.11.11 255.255.255.255
+!
+interface FastEthernet0/0
+ ip address 192.168.122.2 255.255.255.0
+ duplex full
+!
+interface FastEthernet1/0
+ no ip address
+ shutdown
+ duplex full
+!
+ip forward-protocol nd
+!
+!
+no ip http server
+no ip http secure-server
+!
+!
+!
+!
+control-plane
+!
+!
+line con 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+ stopbits 1
+line aux 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+ stopbits 1
+line vty 0 4
+ login local
+ transport input ssh
+!
+!
+end
+
+INFO:paramiko.transport:Connected (version 1.99, client Cisco-1.25)
+INFO:paramiko.transport:Authentication (password) successful!
+INFO:netmiko:Output of show ip interface brief:
+Interface              IP-Address      OK? Method Status                Protocol
+FastEthernet0/0        192.168.122.2   YES NVRAM  up                    up      
+FastEthernet1/0        unassigned      YES unset  administratively down down    
+Loopback0              11.11.11.11     YES manual up                    up      
+INFO:netmiko:Output of configuration commands:
+configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+R1(config)#interface loopback 0
+R1(config-if)#ip address 11.11.11.11 255.255.255.255
+R1(config-if)#no shut
+R1(config-if)#exit
+R1(config)#do write memory
+Building configuration...
+[OK]
+R1(config)#end
+R1#
+INFO:netmiko:Output of show run brief:
+Building configuration...
+
+Current configuration : 1076 bytes
+!
+! Last configuration change at 00:27:20 UTC Thu Mar 21 2024 by shawki
+!
+version 15.2
+service timestamps debug datetime msec
+service timestamps log datetime msec
+!
+hostname R1
+!
+boot-start-marker
+boot-end-marker
+!
+!
+enable secret 4 9ZAcADji.hxi7By8wLltz/MlI4nw2F2How0PljTGjAE
+!
+no aaa new-model
+no ip icmp rate-limit unreachable
+!
+!
+!
+!
+!
+!
+no ip domain lookup
+ip domain name shawki.com
+ip cef
+no ipv6 cef
+!
+!
+multilink bundle-name authenticated
+!
+!
+!
+!
+!
+!
+!
+username shawki password 0 ********
+!
+!
+!
+!
+!
+ip tcp synwait-time 5
+! 
+!
+!
+!
+!
+!
+!
+!
+!
+interface Loopback0
+ ip address 11.11.11.11 255.255.255.255
+!
+interface FastEthernet0/0
+ ip address 192.168.122.2 255.255.255.0
+ duplex full
+!
+interface FastEthernet1/0
+ no ip address
+ shutdown
+ duplex full
+!
+ip forward-protocol nd
+!
+!
+no ip http server
+no ip http secure-server
+!
+!
+!
+!
+control-plane
+!
+!
+line con 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+ stopbits 1
+line aux 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+ stopbits 1
+line vty 0 4
+ login local
+ transport input ssh
+!
+!
+end
+
+INFO:netmiko:Routine Backup of configuration:
+Building configuration...
+
+Current configuration : 1076 bytes
+!
+! Last configuration change at 00:27:20 UTC Thu Mar 21 2024 by shawki
+!
+version 15.2
+service timestamps debug datetime msec
+service timestamps log datetime msec
+!
+hostname R1
+!
+boot-start-marker
+boot-end-marker
+!
+!
+enable secret 4 9ZAcADji.hxi7By8wLltz/MlI4nw2F2How0PljTGjAE
+!
+no aaa new-model
+no ip icmp rate-limit unreachable
+!
+!
+!
+!
+!
+!
+no ip domain lookup
+ip domain name shawki.com
+ip cef
+no ipv6 cef
+!
+!
+multilink bundle-name authenticated
+!
+!
+!
+!
+!
+!
+!
+username shawki password 0 ********
+!
+!
+!
+!
+!
+ip tcp synwait-time 5
+! 
+!
+!
+!
+!
+!
+!
+!
+!
+interface Loopback0
+ ip address 11.11.11.11 255.255.255.255
+!
+interface FastEthernet0/0
+ ip address 192.168.122.2 255.255.255.0
+ duplex full
+!
+interface FastEthernet1/0
+ no ip address
+ shutdown
+ duplex full
+!
+ip forward-protocol nd
+!
+!
+no ip http server
+no ip http secure-server
+!
+!
+!
+!
+control-plane
+!
+!
+line con 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+ stopbits 1
+line aux 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+ stopbits 1
+line vty 0 4
+ login local
+ transport input ssh
+!
+!
+end
+
